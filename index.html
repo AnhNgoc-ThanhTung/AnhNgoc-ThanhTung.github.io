@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ánh Ngọc - Thanh Tùng</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Mea+Culpa&display=swap');
+        html{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: false;
+        }
+        .container{
+            display: block;
+            width: 80%;
+            height: fit-content;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            position: relative;
+        }
+        h1{
+            font-family: 'Mea Culpa', cursive;
+            font-size: xx-large;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 1vh;
+        }
+        p{
+            font-family: 'Lora', serif;
+            font-size: x-large;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comming soon...</h1>
+        <p id="countdown"></p>
+    <div>
+</body>
+<script lang="javascript">
+    function Countdown(){
+        var WDsec = (new Date(2025, 1, 9)).getTime();
+        var td = new Date();
+        var tdSec = td.getTime();
+        var secs = Math.floor((-tdSec + WDsec) / 1000);
+        var timeleft = "";
+        if(secs<0){
+            return;
+        }
+        var dhm = Math.floor(secs / 86400);
+        secs %= 86400;
+        timeleft = dhm + " ngày ";
+        dhm = Math.floor(secs / 3600);
+        secs %= 3600;
+        timeleft = timeleft + (dhm < 10 ? ("0" + dhm) : dhm) + " giờ ";
+        dhm=Math.floor(secs / 60);
+        timeleft = timeleft + (dhm < 10 ? ("0" + dhm) : dhm) + " phút ";
+        secs %= 60;
+        document.getElementById("countdown").innerText = timeleft + (secs < 10 ? ("0" + secs) : secs) + " giây";
+    }
+    Countdown();
+    setInterval(Countdown, 1000);
+</script>
+</html>
