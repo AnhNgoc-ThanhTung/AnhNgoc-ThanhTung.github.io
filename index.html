@@ -1,73 +1,50 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ánh Ngọc - Thanh Tùng</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Mea+Culpa&display=swap');
-        html{
-            height: 100%;
-            margin: 0;
-        }
-        body{
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: false;
-        }
-        .container{
-            display: block;
-            width: 80%;
-            height: fit-content;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%);
-            position: relative;
-        }
-        h1{
-            font-family: 'Mea Culpa', cursive;
-            font-size: xx-large;
-            text-align: center;
-            margin: 0;
-            margin-bottom: 1vh;
-        }
-        p{
-            font-family: 'Lora', serif;
-            font-size: x-large;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Comming soon...</h1>
-        <p id="countdown"></p>
-    <div>
+    <div class="cover">
+        <h1>Ánh Ngọc<br>-<br>Thanh Tùng</h1>
+    </div>
+    <div class="bride">
+        <img src="./imgs/testd.jpeg" alt="Cô Dâu">
+        <h2>Cô Dâu: Ánh Ngọc</h2>
+    </div>
+    <div class="groom">
+        <img src="./imgs/testr.jpeg" alt="Chú Rể">
+        <h2>Chú Rể: Thanh Tùng</h2>
+    </div>
+    <div class="invitation">
+        <p>Trân trọng kính mời<br>đến dự buổi lễ kết hôn của chúng tôi</p>
+        <p>vào hồi</p>
+        <h1>09 giờ</h1>
+        <h2>ngày 09/02/2025</h2>
+        <p>tại tư gia nhà gái</p>
+    </div>
+    <div class="rsvp">
+        <form id="rsvpForm"> 
+            <label for="name">Họ Tên:</label> 
+            <input type="text" id="name" name="name" required> 
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="tel" id="phone" name="phone" required> 
+            <label for="attendance">Xác Nhận Tham Dự:</label> 
+            <select id="attendance" name="attendance" required> 
+                <option value="yes">Có</option> 
+                <option value="no">Không</option> 
+            </select> 
+            <label for="message">Lời Chúc:</label>
+            <textarea id="message" name="message"></textarea> 
+            <button type="submit">Gửi</button> 
+        </form>
+    </div>
+    <div class="messages">
+        <h3>Lời Chúc:</h3>
+        <ul id="messagesList"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script lang="javascript">
-    function Countdown(){
-        var WDsec = (new Date(2025, 1, 9)).getTime();
-        var td = new Date();
-        var tdSec = td.getTime();
-        var secs = Math.floor((-tdSec + WDsec) / 1000);
-        var timeleft = "";
-        if(secs<0){
-            return;
-        }
-        var dhm = Math.floor(secs / 86400);
-        secs %= 86400;
-        timeleft = dhm + " ngày ";
-        dhm = Math.floor(secs / 3600);
-        secs %= 3600;
-        timeleft = timeleft + (dhm < 10 ? ("0" + dhm) : dhm) + " giờ ";
-        dhm=Math.floor(secs / 60);
-        timeleft = timeleft + (dhm < 10 ? ("0" + dhm) : dhm) + " phút ";
-        secs %= 60;
-        document.getElementById("countdown").innerText = timeleft + (secs < 10 ? ("0" + secs) : secs) + " giây";
-    }
-    Countdown();
-    setInterval(Countdown, 1000);
-</script>
 </html>
