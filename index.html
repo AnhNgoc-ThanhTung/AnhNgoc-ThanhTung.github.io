@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,32 +19,42 @@
         <h2>Chú Rể: Thanh Tùng</h2>
     </div>
     <div class="invitation">
-        <p>Trân trọng kính mời<br>đến dự buổi lễ kết hôn của chúng tôi</p>
+        <p>Trân trọng kính mời<br>đến dự lễ kết hôn của chúng tôi</p>
         <p>vào hồi</p>
-        <h1>09 giờ</h1>
+        <h1>09 giờ 00</h1>
         <h2>ngày 09/02/2025</h2>
         <p>tại tư gia nhà gái</p>
         <p>Đ/c thôn Do Nghĩa - Nghĩa An -<br> Ninh Giang - Hải Dương</p>
     </div>
+    <div class="tks">
+        <h3>Rất mong quý vị sắp xếp thời gian<br>đến dự và chung vui cùng gia đình!</h3>
+        <p>Thời gian còn lại</p>
+        <div class="countdown">
+            <div class="timetag" id="lngay">00</div>
+            <div class="timetag" id="lgio">00</div>
+            <div class="timetag" id="lphut">00</div>
+            <div class="timetag" id="lgiay">00</div>
+        </div>
+    </div>
     <div class="rsvp">
         <form id="rsvpForm"> 
-            <label for="name">Họ Tên:</label> 
+            <label for="name">Tên:</label> 
             <input type="text" id="name" name="name" required> 
-            <label for="phone">Số Điện Thoại:</label>
+            <label for="phone">Số điện thoại:</label>
             <input type="tel" id="phone" name="phone" required> 
-            <label for="attendance">Xác Nhận Tham Dự:</label> 
+            <label for="attendance">Xác nhận tham dự:</label> 
             <select id="attendance" name="attendance" required> 
                 <option value="yes">Có</option> 
                 <option value="no">Không</option> 
             </select> 
-            <label for="message">Lời Chúc:</label>
+            <label for="message">Lời chúc:</label>
             <textarea id="message" name="message"></textarea> 
             <button type="submit">Gửi</button> 
         </form>
     </div>
     <div class="messages">
         <h3>Lời Chúc:</h3>
-        <ul id="messagesList"></ul>
+        <ul id="messagesList"> </ul>
     </div>
     <script src="script.js"></script>
 </body>

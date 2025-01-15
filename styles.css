@@ -39,7 +39,7 @@ body {
     object-fit: cover;
 }
 
-.invitation, .rsvp, .messages {
+.invitation, .tks, .rsvp, .messages {
     background: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -62,6 +62,56 @@ body {
     font-family: 'Lobster', cursive;
     font-size: x-large;
     text-align: center;
+}
+
+.tks>h3{
+    font-family: 'Lobster', cursive;
+    font-size: medium;
+    text-align: center;
+}
+
+.tks>p{
+    font-family: 'Lora', serif;
+    font-size: large;
+    text-align: center;
+}
+
+.tks>.countdown{
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.timetag{
+    display: grid;
+    vertical-align: middle;
+    border: 1px solid rgba(243, 137, 137, 0.25);
+    border-radius: 4px;
+    min-width: 3rem;
+    width: fit-content;
+    height: 4rem;
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.timetag::after{
+    font-family: 'Lora', serif;
+    font-size: large;
+    text-align: center;
+}
+.timetag#lngay::after{
+    content: "ngày";
+}
+.timetag#lgio::after{
+    content: "giờ";
+}
+.timetag#lphut::after{
+    content: "phút";
+}.timetag#lgiay::after{
+    content: "giây";
 }
 
 label {
@@ -88,4 +138,33 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+#messagesList>li{
+    border: 1px solid rgba(243, 137, 137, 0.25);
+    border-radius: 5px; 
+    list-style: url('./imgs/cmticon.png') outside; 
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+li>span{
+    transform: translateY(-200%); 
+    position: relative;
+    display: block;
+    height: fit-content;
+    font-family: 'Lobster', cursive;
+    font-size: small;
+    margin: 0;
+    
+}
+li>p{
+    display: block;
+    position: relative;
+    transform: translateY(-100%); 
+    height: fit-content;
+    font-family: 'Lora', serif;
+    font-size: medium;
+    margin: 0;
+    margin-left: 10px;
 }
