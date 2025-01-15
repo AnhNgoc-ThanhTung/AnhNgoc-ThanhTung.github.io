@@ -16,6 +16,11 @@ body {
     color: white;
 }
 
+h2{
+    font-family: 'Lobster', cursive;
+    font-size: large;
+}
+
 .cover>h1 {
     font-family: 'Lora', serif;
     font-size: 3em;
@@ -149,7 +154,7 @@ button:hover {
 }
 
 li>span{
-    transform: translateY(-200%); 
+    transform: translateY(-30px); 
     position: relative;
     display: block;
     height: fit-content;
@@ -161,7 +166,7 @@ li>span{
 li>p{
     display: block;
     position: relative;
-    transform: translateY(-100%); 
+    transform: translateY(-20px); 
     height: fit-content;
     font-family: 'Lora', serif;
     font-size: medium;
